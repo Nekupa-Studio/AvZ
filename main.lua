@@ -6,6 +6,13 @@ _G.sprite = require("sprite")
 _G.windowWidth  = love.graphics.getWidth()
 _G.windowHeight = love.graphics.getHeight()
 
+local archer = sprite:New("assets/sprites/archer_firing.png", 24, 24)
+archer.x = 500
+archer.y = 500
+archer.sx = 8
+archer.sy = 8
+archer.anim.framerate = 5
+
 function love.load()
     ltm:Load()
 end
@@ -16,4 +23,5 @@ end
 
 function love.draw()
     ltm:Draw()
+    archer:AnimatedDraw()
 end
