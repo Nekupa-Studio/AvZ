@@ -1,5 +1,6 @@
 _G.love = require("love")
 _G.sti = require("Simple-Tiled-Implementation/sti")
+_G.sprite = require("sprite")
 
 function love.load()
 	-- Grab window size
