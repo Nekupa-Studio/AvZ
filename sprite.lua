@@ -12,14 +12,6 @@ function parseImage(img, width, height)
         table.insert(anim.quads, quad)
     end
 
-    for i, j in pairs(anim) do
-        print(i, j)
-        if type(j) == "table" then
-            for x, w in pairs(j) do
-                print("   " .. tostring(x) .. tostring(w))
-            end
-        end
-    end
     return anim
 end
 
@@ -33,7 +25,6 @@ function sprite:new(imagefilename, width, height)
         self.anim = parseImage(self.baseImage, width, height)
     end
 
-    print(self.anim)
     return self
 end
 
