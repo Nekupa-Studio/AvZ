@@ -6,6 +6,8 @@ _G.sprite = require("sprite")
 _G.windowWidth  = love.graphics.getWidth()
 _G.windowHeight = love.graphics.getHeight()
 
+love.graphics.setDefaultFilter("nearest")
+
 local archer = sprite:New("assets/sprites/archer_firing.png", 24, 24)
 archer.x = 500
 archer.y = 500
